@@ -9,6 +9,3 @@ export interface PlacedItem {
 
 export type WeatherType = 'clear' | 'rain' | 'snow' | 'storm';
 export type TimeOfDay = 'day' | 'night';
-
-export type InteractionMode = 'place' | 'remove';
-export type QualityPreset = 'auto' | 'quality' | 'performance';
