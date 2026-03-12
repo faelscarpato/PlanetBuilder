@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------
+   2026 tokens (minimal, project-scoped)
+   - Consistent shadow stack for “3D defined” UI
+   - Subtle glass + depth without killing contrast
+-------------------------------------------------- */
+:root{
+  --shadow-ambient: 0 18px 40px rgba(0,0,0,0.18);
+  --shadow-lift: 0 26px 60px rgba(0,0,0,0.24);
+  --shadow-inner-hi: inset 0 1px 0 rgba(255,255,255,0.65);
+  --shadow-inner-lo: inset 0 -8px 18px rgba(0,0,0,0.18);
+}
+
+/* Better motion defaults */
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+/* Drift used by background clouds (was missing before) */
+@keyframes drift {
+  0% { transform: translateX(-15%) translateY(0); }
+  50% { transform: translateX(10%) translateY(-1%); }
+  100% { transform: translateX(35%) translateY(0); }
+}
+
+/* Soft float for panels / icons (optional utility via inline style) */
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
